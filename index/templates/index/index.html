@@ -1,0 +1,74 @@
+{% extends 'index/layout.html' %}
+{% load static %}
+{% block script %}
+<script src = "{% static 'index/index.js' %}" defer></script>
+<script src="{% static 'lib/cookie.min.js' %}" defer></script>
+{% endblock %}
+{% load static %}
+{% block body %}
+<div class="container-fluid">
+    <div class="topnav nav-effect">
+        <div class="nav-padding">
+            <span class="nav-ham" id="nav-ham">&#9776;</span>
+            <img src = "{% static 'Icon/icon.png' %}" alt = "Data Drift" class="navbar-icon form-icon" title = "Forms">
+            <span class="nav-text" title = "Forms"><a href = "{% url 'index' %}" class="nav-link">Forms CLONE</a></span>
+            <a href="{% url 'logout' %}">
+                <img src = "{% static 'Icon/Logout.jpg' %}" alt = "Logout Icon" class="navbar-icon float-right logout-icon" title = "Logout">
+            </a>
+        </div>
+    </div>
+    <div class="sidebar" id = "sidebar">
+        <span class="close-sidebar" id="close-sidebar">&times;</span>
+        <div class="sidebar-content">
+            <h4 class="sidebar-title">
+                <a href = "{% url 'index' %}" class="sidebar-title-link">
+                    <span>Data Drift</span>
+                </a>
+            </h4>
+            <p class="text-label">Found bug? Submit an issue <a href="#" class="link">here</a></p>
+            <p class="text-label">License: <a href="#" class="link">MIT</a></p>
+            <p class="text-label">Source code: <a href="#">
+                <img src = "{% static 'Icon/github.png' %}" class="github-icon" alt="GitHub"></a></p>
+            <p class="text-label">😃 Hit that <a href="#" class="link">⭐ button</a>to show some ❤️</p>
+        </div>
+    </div>
+    <div class="create-form">
+        <div class="container">
+            <p class="forms-label">Start a New Form</p>
+            <div class="form-template-box">
+                <img src = "{% static 'Icon/blank-form.png' %}" alt = "Blank form" title = "Blank form" id="create-blank-form">
+                <span class="form-template-label">Blank Form</span>
+            </div>
+            <div class="form-template-box big-screen">
+                <img src = "{% static 'Template/contact_information.png' %}" alt = "Contact Information" title = "Contact Information" id="create-contact-form">
+                <span class="form-template-label">Contact Information</span>
+            </div>
+            <div class="form-template-box big-screen">
+                <img src = "{% static 'Template/customer_feedback.png' %}" alt = "Customer Feedback" title = "Customer Feedback" id="create-customer-feedback">
+                <span class="form-template-label">Customer Feedback</span>
+            </div>
+            <div class="form-template-box big-screen">
+                <img src = "{% static 'Template/customer_feedback.png' %}" alt = "Event Registration" title = "Event Registration" id="create-event-registration">
+                <span class="form-template-label">Event Registration</span>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="form-list">
+            <p class="forms-label">My forms:</p>
+            {% for i in forms %}
+            <a href = "{% url 'edit_form' i.code %}" class="form-list-link">
+                <div class="form-box">
+                    <div class="form-list-title"><h5 class="form-list-title-text">{{i.title}}</h5></div>
+                    {% if i.createdAt == i.updatedAt %}
+                    <p class="form-list-timestamp">{{i.createdAt}}</p>
+                    {% else %}
+                    <p class="form-list-timestamp">{{i.updatedAt}}</p>
+                    {% endif %}
+                </div>
+            </a>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock %}

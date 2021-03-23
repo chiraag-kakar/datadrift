@@ -1,0 +1,14 @@
+*.sqlite3
+*.sqlite3-journal
+*.pyo
+*.pyc
+*~
+/.vscode
+__pycache__
+virtual
+db.sqlite3
+/static
+.DS_Store
+env/
+virtual/
+v/

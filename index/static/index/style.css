@@ -1,0 +1,711 @@
+@import url("https://fonts.googleapis.com/css?family=Permanent+Marker");
+@import url("https://fonts.googleapis.com/css?family=Product+Sans");
+@import url("https://fonts.googleapis.com/css?family=Google+Sans");
+
+body{
+    scroll-behavior: smooth;
+}
+
+.form-error{
+    font-family: "Permanent Marker";
+    color: red;
+}
+
+.form-icon{
+    width: 40px;
+    margin-bottom: 0.5rem;
+}
+
+.topnav{
+    float: left;
+    width: 100vw;
+}
+
+.navbar-icon{
+    float: left;
+}
+.nav-text{
+    float: left;
+    position: relative;
+    vertical-align: middle;
+    margin-top: 0.75rem;
+    font-family: "Product Sans";
+    color: #5f6368;
+    padding-left: 1rem;
+}
+
+.nav-link{
+    color: #000;
+    text-decoration: none;
+}
+
+.nav-effect{box-shadow: 0 2px 30px -2px rgba(0,0,0,.2);}
+
+.float-right{
+    float: right;
+}
+
+.logout-icon{
+    width: 40px;
+    cursor: pointer;
+}
+
+.nav-padding{
+    padding: 10px 20px 10px;
+}
+.sidebar{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    background-color: #FFF;
+    box-shadow: 10px 0 5px -2px #888;
+}
+
+.nav-ham{
+    float: left;
+    font-size: 1.8rem;
+    position: relative;
+    vertical-align: middle;
+    margin-right: 1rem;
+    cursor: pointer;
+}
+
+.close-sidebar{
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    cursor: pointer;
+}
+
+.sidebar-content{
+    margin: 20px
+}
+
+.sidebar-title{
+    margin-top: 50px;
+    font-family: "Google Sans";
+    font-size: 1.3rem;
+    border-bottom: 1px solid #888;
+    text-align: center;
+    cursor: pointer;
+}
+
+.sidebar-title-link{
+    text-decoration: none;
+    color: #414244;
+}
+
+.github-icon{
+    width: 1.3rem;
+}
+
+.create-form{
+    background-color: #f1f3f4;
+    width: 100vw;
+    float: left;
+}
+
+.forms-label{
+    font-family: "Google Sans";
+    margin: 10px 10px 5px 10px;
+}
+
+.form-template-box{
+    margin: 5px 30px 10px 0;
+    float: left;
+}
+
+.form-template-box img{
+    width: 10em;
+    height: 7em;
+    float: left;
+}
+
+.form-template-box:hover{
+    border: 1px solid black;
+}
+
+.form-box{
+    width: 250px;
+    border: 1px solid rgb(182, 179, 179);
+    padding: 5px;
+    cursor: pointer;
+    margin: 10px;
+    position: relative;
+}
+
+.form-box:hover{
+    border: 1px solid darkblue;
+}
+
+.form-list{
+    float: left;
+    margin-top: 20px;
+}
+
+.form-list-title{
+    align-items: flex-end;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.form-list-title-text{
+    text-align: left;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    text-overflow: ellipsis;
+    font-family: "Google Sans";
+    margin: 2.5px;
+}
+
+.form-list-timestamp{
+    margin: 2.5px ;
+    color: gray;
+}
+
+.form-list-link{
+    color: #000000;
+    text-decoration: none;
+    float: left;
+}
+
+.error-page{
+    text-align: center;
+    font-family: "Roboto Condensed";
+}
+
+.form-topnav{
+    padding: 15px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.nav-form-title{
+    width: 300px;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    text-overflow: ellipsis;
+}
+
+.edit-on-click{
+    border: none;
+    font-size: 1.2rem;
+    transition: 1s;
+    overflow-y: hidden;
+}
+
+.edit-on-click:focus{
+    outline: none !important;
+    border-bottom: 1px solid #202124;
+}
+
+.nav-form-menu-icon{
+    width: 1.5rem;
+    margin: 10px 15px;
+    cursor: pointer;
+    float: left;
+}
+
+.send-form-btn{
+    position: relative;
+    background-color: #673ab7;
+    color: #ddd;
+    font-size: 1rem;
+    font-family: "Google Sans";
+    vertical-align: middle;
+    border: 1px solid #ddd;
+    padding: 10px 20px;
+    float: left;
+    margin: 0.2px 15px;
+}
+
+.question-box{
+    background-color: #FFF;
+}
+
+.form-title{
+    font-size: 2rem;
+    font-family: "Google Sans";
+    font-weight: normal;
+    margin: 10px;
+    width: -webkit-fill-available;
+}
+
+.form-description{
+    font-size: 1rem;
+    font-family: "Roboto Condensed";
+    margin: 10px;
+    width: -webkit-fill-available;
+}
+
+.form-title-box{
+    border-bottom: 1px solid #ddd;
+}
+
+.modal{
+    display: none;
+    position: fixed;
+    z-index: 6;
+    padding: calc(10vh - 20px) 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content{
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-height: 80%;
+    overflow: auto;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+.modal-close-btn{
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.modal-close-btn:hover, .modal-close-btn:focus{
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-title{
+    font-family: "Google Sans";
+    font-size: 1.2rem;
+    border-bottom: 1px solid rgb(233, 232, 232);
+    margin-bottom: 0;
+}
+
+.modal-subtitle{
+    font-family: "Roboto Condensed";
+    font-size: 1rem;
+    font-weight: normal;
+}
+
+.setting-form-label{
+    font-family: "Roboto Condensed";
+}
+
+.modal-division{
+    margin: 30px 0;
+}
+.confirmation-msg-input{
+    width: -webkit-fill-available;
+    border-bottom: 1px solid #202124;
+    min-height: 20px !important;
+}
+
+.setting-options{
+    position: relative;
+}
+.setting-option-cancel{
+    margin: 20px 10px;
+    cursor: pointer;
+    color: #84878b;
+
+}
+
+.btn-save-setting{
+    background-color: #673ab7;
+    color: #ddd;
+    font-size: 1rem;
+    font-family: "Google Sans";
+}
+
+.setting-preview-form, .setting-preview-form a{
+    cursor: pointer;
+    color: #bbb;
+    font-family: "Google Sans";
+    text-decoration: none;
+}
+
+.setting-preview-form:hover{
+    opacity: .5;
+}
+
+.danger-zone{
+    font-weight: bold;
+    font-family: "Google Sans";
+    font-size: 1.4rem;
+}
+
+.delete-form-title{
+    margin: 0;
+    font-family: "Roboto Condensed";
+}
+
+.delete-form-description{
+    margin: 0;
+    font-family: "Poppins";
+}
+
+.delete-form-btn{
+    font-size: 1rem;
+    font-family: "Poppins";
+    padding: 3px !important;
+    background-color: #E71C23;
+    color: #fff;
+}
+
+.question-options{
+    background-color: #fff;
+    margin: 20px 0;
+    position: fixed;
+    bottom: 10%;
+    right: 0;
+    border: 1px solid #84878b;
+}
+
+.form-option-icon{
+    width: 2rem;
+    margin: 5px;
+    cursor: pointer;
+    display: block;
+}
+
+.collect-email{
+    margin: 10px;
+}
+
+.question-title{
+    font-family: "Google Sans";
+    font-size: 1.3rem;
+    font-weight: normal;
+}
+
+.require-star{
+    color: #E71C23;
+}
+
+.require-email-edit{
+    padding: 5px;
+    border: none;
+    border-bottom: 1px solid #84878b;
+    width: 50%;
+    cursor: not-allowed;
+}
+
+.collect-email-desc{
+    color: #70757a;
+    margin: 10px 0;
+}
+
+.open-setting{
+    color: #1a73e8;
+    cursor: pointer;
+}
+
+.question-title{
+    font-family: "Google Sans";
+    font-size: 1.5rem;
+    width: 65%;
+}
+
+.question-type-select{
+    width: calc(35% - 8px);
+    padding: 5px 35px 5px 5px;
+    font-size: 1.2rem;
+    border: 1px solid #ccc;
+    height: 34px;
+}
+
+.question-type-select::-ms-expand{
+    display: none;
+}
+
+.choices{
+    margin: 10px 0;
+}
+
+.choice{
+    margin: 5px 0;
+    font-family: "Google Sans";
+}
+
+.add-option{
+    cursor: pointer;
+    color: #70757a;
+}
+
+.edit-choice{
+    display: inline;
+    width: 80%;
+    border: none;
+    overflow-y: hidden;
+    font-family: "Google Sans";
+}
+
+.remove-option{
+    display: inline;
+    font-size: 1.3rem;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.choice-option{
+    padding: 10px;
+    display: block;
+    border-top: 1px solid #ccc;
+}
+
+.required{
+    font-family: "Roboto Condensed";
+}
+
+.answers{
+    margin: 5px;
+    font-family: "Google Sans";
+}
+
+.short-answer{
+    width: 50%;
+    border: none;
+    padding: 5px;
+    border-bottom: 1px solid #70757a;
+}
+
+.long-answer{
+    width: -webkit-fill-available;
+    border: none;
+    padding: 5px;
+    border-bottom: 1px solid #70757a;
+}
+
+.question-option-icon{
+    width: 1.5rem;
+    cursor: pointer;
+}
+.form-navigation{
+    background-color: #fff;
+    width: 400px;
+    margin: auto;
+}
+
+.navigation{
+    text-align: center;
+    cursor: pointer;
+}
+
+.form-navigation .active{
+    color:rgb(0, 132, 223);
+    font-weight: bold;
+    font-family: "Google Sans";
+    font-size: 0.8rem;
+}
+
+.question-score{
+    max-width: calc(25% - 8px);
+    display: inline-block;
+    font-family: "Google Sans";
+    margin: 1rem;
+}
+
+.input-score{
+    width: 30px;
+    border: none;
+    border-bottom: 1px solid rgb(0, 132, 223);
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none;
+}
+
+.question-title-score{
+    font-family: "Google Sans";
+    display: inline-block;
+    width: 75%;
+    font-size: 1.5rem;
+    font-weight: normal;
+    margin: 1rem;
+}
+
+.answer-key, .feedback{
+    margin: 5px 10px;
+}
+.answer-key-title, .feedback-title{
+    margin: 0;
+    font-family: "Roboto Condensed";
+    display: inline-block;
+}
+
+.multiple-choice{
+    width: 100%;
+    margin: 5px;
+}
+
+.btn-submit{
+    background-color: #1a73e8;
+    color: #fff;
+    border: 1px solid #fff;
+    cursor: pointer;
+}
+
+.required-info{
+    color: #E71C23;
+    margin: 10px;
+}
+
+.edit-form-link{
+    width: 4rem;
+    height: 4rem;
+    position: fixed;
+    bottom: 50px;
+    right: 0%;
+    border-radius: 50%;
+    border: 1px solid #5f6368;
+}
+
+.response-title{
+    font-family: "Google Sans";
+    font-size: 1.5rem;
+    font-weight: normal;
+}
+
+.score-title{
+    font-family: "Google Sans";
+    margin: 10px;
+    font-size: 1.2rem;
+    font-weight: normal;
+}
+
+.question-title{
+    font-family: "Google Sans";
+    font-size: 1.5rem;
+}
+
+.view-score-btn{
+    position: relative;
+    background-color: #673ab7;
+    color: #ddd;
+    font-family: "Google Sans";
+    border: 1px solid #ddd;
+    padding: 10px 20px;
+    margin: 5px 15px;
+}
+
+.feedback{
+    margin: 10px 5px;
+}
+
+.feedback-title{
+    font-family: "Poppins";
+    font-size: 1.1rem;
+    font-weight: normal;
+}
+
+.edit-response-link{
+    margin-left: 15px;
+}
+
+.form-template-label{
+    font-family: "Google Sans";
+    margin: 10px;
+    display: block;
+}
+
+.form-animate {
+    position: relative;
+    display: block;
+    overflow: hidden;
+}
+  
+.input-animate {
+    width: -webkit-fill-available;
+    border: none;
+    display: inline-block;
+    outline: none;
+    padding: 10px;
+    font-size: 20px;
+    background-color: transparent;
+    border-bottom: 1px solid #7c7c7c;
+}
+  
+.input-onFocus {
+    transition: all 0.5s;
+    display: inline-block;
+    bottom: 0;
+    left: -100%;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #1a73e8;
+}
+  
+.form-animate, .input-animate {
+    color: inherit;
+}
+  
+.form-animate .input-animate:focus + .input-onFocus {
+    left: 0;
+}
+@media only screen and (max-width: 768px){
+    .nav-form-title{
+        width: 100px;
+    }
+
+    .form-list-link, .form-box{
+        width: -webkit-fill-available;
+    }
+    .modal{
+        padding: 0;
+    }
+
+    .modal-content{
+        max-width: none;
+        max-height: none;
+        width: -webkit-fill-available;
+        height: calc(100% - 40px);
+        border-radius: 0%;
+    }
+    .question-title, .question-title-score{
+        width: 100%;
+    }
+    .question-type-select{
+        width: 100%;
+        display: block;
+    }
+
+    .big-screen{
+        display: none;
+    }
+    .navigation{
+        width: calc((100% - 60px)/3) !important;
+    }
+    .question-score{
+        max-width: 100%;
+        width: 100%;
+    }
+    .input-score{
+        width: 50px;
+    }
+}
+
+@media only screen and (min-width: 768px){
+    .small-screen{
+        display: none;
+    }
+}
